@@ -2,17 +2,16 @@ import { initializeOpenAI } from "..";
 
 interface generateImageProps {
   prompt: string;
-  n: number;
 }
 
 const openai = initializeOpenAI()
 
-export async function generateImage({ prompt, n }: generateImageProps) {
+export async function generateImage({ prompt }: generateImageProps) {
   var image_url: string | undefined;
 
   const response = await openai.createImage({
     prompt,
-    n,
+    n: 1,
     size: "1024x1024",
   });
 
