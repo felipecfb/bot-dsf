@@ -6,7 +6,7 @@ const commands = Object(commandModules)
 export const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 
 client.once(Events.ClientReady, (c) => {
-  console.log(`🤖 Bot rodando como ${c.user?.tag}`)
+  console.log(`🤖 Bot running like ${c.user?.tag}!`)
 })
 
 client.on(Events.InteractionCreate, async (interaction) => {
