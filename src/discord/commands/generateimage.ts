@@ -18,5 +18,7 @@ export async function execute(interaction: CommandInteraction) {
 
   const image_url = await generateImage({ prompt: String(prompt) });
 
-  return interaction.editReply(image_url)
+  const response = `Here is your image: ${prompt} ${image_url}`
+
+  return interaction.editReply(response)
 }
