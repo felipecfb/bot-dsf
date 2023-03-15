@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src --format cjs,esm --dts",
-    "start": "node dist/index.mjs",
+    "start": "node dist/deploy-commands.js && node dist/index.mjs",
     "dev": "tsx --watch src/index.ts",
     "deploy:commands": "node dist/deploy-commands.js"
   },
