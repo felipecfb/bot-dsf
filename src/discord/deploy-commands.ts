@@ -18,9 +18,8 @@ const rest = new REST({ version: '9' }).setToken(config.DISCORD_BOT_TOKEN)
 
 rest
   .put(
-    Routes.applicationGuildCommands(
+    Routes.applicationCommands(
       config.DISCORD_APPLICATION_ID_KEY,
-      config.DISCORD_GUILD_ID,
     ),
     { body: commands },
   )
