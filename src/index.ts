@@ -1,20 +1,4 @@
-interface User {
-  name: string;
-  age: number;
-}
+import { client } from './bot'
+import config from './config'
 
-function generateUser({ name, age }: User) {
-  const user = {
-    name,
-    age,
-  }
-
-  return user
-}
-
-const user = generateUser({
-  name: 'John Doe',
-  age: 30,
-})
-
-console.log(user);
+client.login(config.DISCORD_BOT_TOKEN)
