@@ -6,7 +6,7 @@ interface generateImageProps {
 
 const openai = initializeOpenAI()
 
-export async function generateImage({ prompt }: generateImageProps) {
+export async function generateImage({ prompt }: generateImageProps): Promise<string> {
   var image_url: string | undefined;
 
   const response = await openai.createImage({

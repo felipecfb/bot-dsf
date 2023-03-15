@@ -5,7 +5,7 @@ import * as commandModules from './commands'
 import { SlashCommandBuilder } from 'discord.js'
 
 type Command = {
-  data: Omit<SlashCommandBuilder, 'addSubcommand' | 'addSubcommandGroup'>
+  data: Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">
 }
 
 const commands = []

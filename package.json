@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup src --format cjs,esm --dts",
-    "start": "node dist/discord/deploy-commands.js && node dist/index.mjs",
-    "dev": "tsx --watch src/index.ts",
-    "deploy:commands": "node dist/discord/deploy-commands.js"
+    "start": "node dist/discord/deploy-commands.mjs && node dist/index.mjs",
+    "dev": "tsx src/discord/deploy-commands.ts && tsx src/index.ts",
+    "deploy:commands": "node dist/discord/deploy-commands.mjs"
   },
   "devDependencies": {
     "@types/node": "^18.15.3",
@@ -22,6 +22,6 @@
     "openai": "^3.2.1"
   },
   "engines": {
-    "node": ">=16.9.0"
+    "node": "18"
   }
 }

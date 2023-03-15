@@ -1,2 +1,2 @@
 export * as ping from './ping'
-export * as generateImage from './generate-image'
+export * as generateimage from './generateimage'
